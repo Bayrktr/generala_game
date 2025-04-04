@@ -1,0 +1,9 @@
+# ninja log v6
+1	39	1743793026871714262	build.ninja	7d473656db7ba84c
+0	285	1743792941490239986	CMakeFiles/generala_game.dir/main.cpp.o	9d29e10d499292c9
+4	258	1743792957076614988	CMakeFiles/generala_game.dir/project/tasks/choose_who_start_first/choose_who_start_first.cpp.o	ac876a3afe03d68b
+258	289	1743792957330686634	generala_game	dbeaa3c339fd3ebb
+4	283	1743793159982140254	CMakeFiles/generala_game.dir/main.cpp.o	9d29e10d499292c9
+4	291	1743793159982538710	CMakeFiles/generala_game.dir/project/tasks/print_score_sheet/print_score_sheet.cpp.o	cf1b96542c315a0b
+4	291	1743793159982401294	CMakeFiles/generala_game.dir/project/tasks/choose_who_start_first/choose_who_start_first.cpp.o	ac876a3afe03d68b
+291	324	1743793160269408154	generala_game	e5790341a621c994
