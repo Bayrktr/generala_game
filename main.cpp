@@ -50,13 +50,11 @@ void calculate_score(int *score, int dice[DICE_COUNT]) {
 
 void myDiceRoll(int my_dice[5], int *my_score) {
     rollDice(my_dice);
-    calculate_score(my_score, my_dice);
 }
 
 
 void computerDiceRoll(int computer_dice[5], int *computer_score) {
     rollDice(computer_dice);
-    calculate_score(computer_score, computer_dice);
 }
 
 void askReroll(bool *isYes) {
@@ -85,8 +83,8 @@ void whichOneDoYouKeep(int currentDices[5], int keepList[2]) {
         }
     }
 
-    keepList[0] = keepListCopy[0] + 1;
-    keepList[1] = keepListCopy[1] + 1;
+    keepList[0] = keepListCopy[0] - 1;
+    keepList[1] = keepListCopy[1] - 1;
 }
 
 
@@ -135,7 +133,6 @@ void my_round(int *my_score, int my_dice[5]) {
             rollThreeDice(newThreeDice);
             newDiceAfterReroll(my_dice, newThreeDice, keepList);
         } else {
-            calculate_score(my_score, my_dice);
             break;
         }
     }
@@ -156,7 +153,6 @@ void computer_round(int *computer_score, int computer_dice[5]) {
             rollThreeDice(newThreeDice);
             newDiceAfterReroll(computer_dice, newThreeDice, keepList);
         } else {
-            calculate_score(computer_score, computer_dice);
             break;
         }
     }
@@ -209,6 +205,9 @@ int main() {
             computer_round(&computer_score, computer_dice);
             my_round(&my_total_score, my_dice);
         }
+
+        calculate_score(&my_score, my_dice);
+        calculate_score(&computer_score, computer_dice);
 
         my_total_score += my_score;
         computer_total_score += computer_score;
